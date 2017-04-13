@@ -18,9 +18,10 @@ import java.awt.event.ActionEvent;
  */
 public class Main {
     
-    //Note: Typically the main method will be in a
-    //separate class. As this is a simple one class
-    //example it's all in the one class.
+    /**
+     * Main to start off the program.
+     * @param args
+     */
     public static void main(String[] args) {
         
         //new Main();
@@ -33,18 +34,16 @@ public class Main {
       
         //This will center the JFrame in the middle of the screen
         guiFrame.setLocationRelativeTo(null);
-
+        //create menu bar at the top
         JMenuBar menuBar = new JMenuBar();
         
         JMenuItem about = new JMenuItem("About...");
         menuBar.add(about);
-        
+        //adds menubar to the jframe.
         guiFrame.add(menuBar, BorderLayout.NORTH);
         
         //The ActionListener class is used to handle the
         //event that happens when the user clicks the button.
-        //As there is not a lot that needs to happen we can 
-        //define an anonymous inner class to make the code simpler.
         about.addActionListener(new ActionListener()
         {
             @Override
