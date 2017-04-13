@@ -30,10 +30,8 @@ public class Main {
 
         JMenuBar menuBar = new JMenuBar();
         
-        JMenu about = new JMenu("Menu");
+        JMenuItem about = new JMenuItem("About...");
         menuBar.add(about);
-        JMenuItem aboutItem = new JMenuItem("About...");
-        about.add(aboutItem);
         
         guiFrame.add(menuBar, BorderLayout.NORTH);
         
@@ -41,7 +39,7 @@ public class Main {
         //event that happens when the user clicks the button.
         //As there is not a lot that needs to happen we can 
         //define an anonymous inner class to make the code simpler.
-        aboutItem.addActionListener(new ActionListener()
+        about.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent event)
