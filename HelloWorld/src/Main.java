@@ -6,7 +6,10 @@ import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JList;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -28,63 +31,58 @@ public class Main {
         //make sure the program exits when the frame closes
         guiFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         guiFrame.setTitle("The Potato Squad");
-        guiFrame.setSize(300,250);
+        guiFrame.setSize(650, 650);
       
         //This will center the JFrame in the middle of the screen
         guiFrame.setLocationRelativeTo(null);
         
-        //Options for the JComboBox 
-        String[] fruitOptions = {"Scott Hiraki", "Irene Fransiga", "Mamadou", "David M.", "Beni"};
-        
-        //The first JPanel contains a JLabel and JCombobox
-        final JPanel comboPanel = new JPanel();
-        JLabel comboLbl = new JLabel("Group Members:");
-        JComboBox fruits = new JComboBox(fruitOptions);
-        
-        comboPanel.add(comboLbl);
-        comboPanel.add(fruits);
-        
+
         //Create the second JPanel. Add a JLabel and JList and
         //make use the JPanel is not visible.
         final JPanel listPanel = new JPanel();
         listPanel.setVisible(false);
-        JLabel listLbl = new JLabel("<html>We are 'The Potato Squad'<br><br>Group Members:<br><br>Irene Fransiga<br>"
-        							+ "Scott Hiraki<br>David M.<br>Mamadou<br>Beni</html>", SwingConstants.CENTER);
-        //JList vegs = new JList(vegOptions);
-        //vegs.setLayoutOrientation(JList.HORIZONTAL_WRAP);
+        JLabel aboutList = new JLabel("<html>We are 'The Potato Squad'<br><br>Group Members:<br><br>Irene Fransiga<br>"
+        							+ "Scott Hiraki<br>David Mkrtychyan<br>Mamadou Barry<br>Tanvir Singh(Beni)<br><br>Email:<br>"
+        							+ "thepotatosquad05@gmail.com<br>URL:<br>"
+        							+ "http://thepotatosquad.tk/</html>", SwingConstants.CENTER);
           
-        listPanel.add(listLbl);
-        //listPanel.add(vegs);
+        listPanel.add(aboutList);
+
+        JMenuBar menuBar = new JMenuBar();
         
-        JButton vegFruitBut = new JButton( "About...");
+        JMenu about = new JMenu("Menu");
+        menuBar.add(about);
+        JMenuItem aboutItem = new JMenuItem("About...");
+        about.add(aboutItem);
+        
+        guiFrame.add(menuBar, BorderLayout.NORTH);
+        
+        JButton aboutButton = new JButton( "About...");
         
         //The ActionListener class is used to handle the
         //event that happens when the user clicks the button.
         //As there is not a lot that needs to happen we can 
         //define an anonymous inner class to make the code simpler.
-        vegFruitBut.addActionListener(new ActionListener()
+        aboutButton.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent event)
             {
-               //When the fruit of veg button is pressed
-               //the setVisible value of the listPanel and
-               //comboPanel is switched from true to 
-               //value or vice versa.
                listPanel.setVisible(!listPanel.isVisible());
-               comboPanel.setVisible(!comboPanel.isVisible());
+               //comboPanel.setVisible(!comboPanel.isVisible());
 
             }
         });
         
         //The JFrame uses the BorderLayout layout manager.
         //Put the two JPanels and JButton in different areas.
-        guiFrame.add(comboPanel, BorderLayout.NORTH);
+        //guiFrame.add(comboPanel, BorderLayout.NORTH);
         guiFrame.add(listPanel, BorderLayout.CENTER);
-        guiFrame.add(vegFruitBut,BorderLayout.SOUTH);
+        guiFrame.add(aboutButton,BorderLayout.SOUTH);
         
         //make sure the JFrame is visible
         guiFrame.setVisible(true);
     }
     
 }
+
