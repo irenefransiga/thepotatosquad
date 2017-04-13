@@ -1,7 +1,6 @@
 //Imports are listed in full to show what's being used
 //could just import javax.swing.* and java.awt.* etc..
 import javax.swing.JFrame;
-import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
@@ -10,6 +9,13 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * 
+ * @author Scott Hiraki, Irene Fransiga, Mamadou Barry, Tanvir Singh, David Mkrtychyan
+ * @version 0.1
+ * This program makes a simple GUI that has a Menu item "About..." that when clicked, opens a new window and displays
+ * our team name, group members, email, and website.
+ */
 public class Main {
     
     //Note: Typically the main method will be in a
