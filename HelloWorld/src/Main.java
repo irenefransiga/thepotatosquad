@@ -41,8 +41,9 @@ public class Main {
         //make use the JPanel is not visible.
         final JPanel listPanel = new JPanel();
         listPanel.setVisible(false);
-        JLabel aboutList = new JLabel("<html>We are 'The Potato Squad'<br><br>Group Members:<br><br>Irene Fransiga<br>"
-        							+ "Scott Hiraki<br>David Mkrtychyan<br>Mamadou Barry<br>Tanvir Singh(Beni)<br><br>Email:<br>"
+        JLabel aboutList = new JLabel("<html>We are 'The Potato Squad'<br><br>Group Members:<br>-------------<br>Irene Fransiga<br>"
+        							+ "Scott Hiraki<br>David Mkrtychyan<br>Mamadou Barry<br>Tanvir Singh(Beni)<br>"
+        							+ "-------------<br>Email:<br>"
         							+ "thepotatosquad05@gmail.com<br>URL:<br>"
         							+ "http://thepotatosquad.tk/</html>", SwingConstants.CENTER);
           
