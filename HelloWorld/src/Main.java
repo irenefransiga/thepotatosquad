@@ -1,14 +1,10 @@
 //Imports are listed in full to show what's being used
 //could just import javax.swing.* and java.awt.* etc..
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.JComboBox;
-import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
@@ -21,11 +17,7 @@ public class Main {
     //example it's all in the one class.
     public static void main(String[] args) {
         
-        new Main();
-    }
-
-    public Main()
-    {
+        //new Main();
         JFrame guiFrame = new JFrame();
         
         //make sure the program exits when the frame closes
@@ -35,19 +27,6 @@ public class Main {
       
         //This will center the JFrame in the middle of the screen
         guiFrame.setLocationRelativeTo(null);
-        
-
-        //Create the second JPanel. Add a JLabel and JList and
-        //make use the JPanel is not visible.
-        final JPanel listPanel = new JPanel();
-        listPanel.setVisible(false);
-        JLabel aboutList = new JLabel("<html>We are 'The Potato Squad'<br><br>Group Members:<br>-------------<br>Irene Fransiga<br>"
-        							+ "Scott Hiraki<br>David Mkrtychyan<br>Mamadou Barry<br>Tanvir Singh(Beni)<br>"
-        							+ "-------------<br>Email:<br>"
-        							+ "thepotatosquad05@gmail.com<br>URL:<br>"
-        							+ "http://thepotatosquad.tk/</html>", SwingConstants.CENTER);
-          
-        listPanel.add(aboutList);
 
         JMenuBar menuBar = new JMenuBar();
         
@@ -58,28 +37,26 @@ public class Main {
         
         guiFrame.add(menuBar, BorderLayout.NORTH);
         
-        JButton aboutButton = new JButton( "About...");
-        
         //The ActionListener class is used to handle the
         //event that happens when the user clicks the button.
         //As there is not a lot that needs to happen we can 
         //define an anonymous inner class to make the code simpler.
-        aboutButton.addActionListener(new ActionListener()
+        aboutItem.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent event)
             {
-               listPanel.setVisible(!listPanel.isVisible());
-               //comboPanel.setVisible(!comboPanel.isVisible());
+            	JOptionPane.showMessageDialog(guiFrame,
+            		    "We are 'The Potato Squad'\nGroup Members:\n-------------\nIrene Fransiga"
+            		    + "\nScott Hiraki\nDavid Mkrtychyan\nMamadou Barry\nTanvir Singh(Beni)\n"
+        							+ "-------------\nEmail:\n"
+        							+ "thepotatosquad05@gmail.com\nURL:\n"
+        							+ "http://thepotatosquad.tk/",
+            		    "A plain message",
+            		    JOptionPane.PLAIN_MESSAGE);
 
             }
         });
-        
-        //The JFrame uses the BorderLayout layout manager.
-        //Put the two JPanels and JButton in different areas.
-        //guiFrame.add(comboPanel, BorderLayout.NORTH);
-        guiFrame.add(listPanel, BorderLayout.CENTER);
-        guiFrame.add(aboutButton,BorderLayout.SOUTH);
         
         //make sure the JFrame is visible
         guiFrame.setVisible(true);
