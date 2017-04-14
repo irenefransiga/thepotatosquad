@@ -1,7 +1,7 @@
 //Imports are listed in full to show what's being used
 //could just import javax.swing.* and java.awt.* etc..
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
@@ -29,8 +29,9 @@ public class Main {
         guiFrame.setLocationRelativeTo(null);
 
         JMenuBar menuBar = new JMenuBar();
-        
+        ImageIcon icon = new ImageIcon("basket.png");
         JMenuItem about = new JMenuItem("About...");
+        about.setIcon(icon);
         menuBar.add(about);
         
         guiFrame.add(menuBar, BorderLayout.NORTH);
@@ -44,15 +45,21 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent event)
             {
+            	
             	JOptionPane.showMessageDialog(guiFrame,
-            		    "We are 'The Potato Squad'\nGroup Members:\n-------------\nIrene Fransiga"
-            		    + "\nScott Hiraki\nDavid Mkrtychyan\nMamadou Barry\nTanvir Singh(Beni)\n"
-        							+ "-------------\nEmail:\n"
-        							+ "thepotatosquad05@gmail.com\nURL:\n"
-        							+ "http://thepotatosquad.tk/",
-            		    "A plain message",
+            		    "Members:"
+            		    + "\nIrene Fransiga"
+            		    + "\nScott Hiraki"
+            		    + "\nDavid Mkrtychyan"
+            		    + "\nMamadou Barry"
+            		    + "\nTanvir Singh(Beni)"
+            		    + "\n\n"
+            		    + "\nEmail:"
+            		    + "\nthepotatosquad05@gmail.com"
+            		    + "\nURL:"
+            		    + "\nhttp://thepotatosquad.tk/",
+            		    "We are 'The Potato Squad'",
             		    JOptionPane.PLAIN_MESSAGE);
-
             }
         });
         
