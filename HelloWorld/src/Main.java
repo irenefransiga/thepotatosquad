@@ -1,3 +1,7 @@
+/*
+ * TCSS360
+ * Iteration 1
+ */
 //Imports are listed in full to show what's being used
 //could just import javax.swing.* and java.awt.* etc..
 import javax.swing.ImageIcon;
@@ -9,14 +13,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /**
- * @author Scott Hiraki, Irene Fransiga, Mamadou Barry, Tanvir Singh, David Mkrtychyan
- * @version 0.1
  * This program makes a simple GUI that has a Menu item "About..." that when clicked, opens a new window and displays
  * our team name, group members, email, and website.
+ * 
+ * @author Scott Hiraki, Irene Fransiga, Mamadou Barry, Tanvir Singh, David Mkrtychyan
+ * @version April 2017
  */
 public class Main {
 	/** myFrame. **/
-    private static JFrame myFrame = new JFrame();
+    public static JFrame myFrame = new JFrame();
     /**
      * Main to start off the program.
      * @param args
