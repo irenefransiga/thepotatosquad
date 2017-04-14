@@ -10,11 +10,19 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * 
+ * @author Scott Hiraki, Irene Fransiga, Mamadou Barry, Tanvir Singh, David Mkrtychyan
+ * @version 0.1
+ * This program makes a simple GUI that has a Menu item "About..." that when clicked, opens a new window and displays
+ * our team name, group members, email, and website.
+ */
 public class Main {
     
-    //Note: Typically the main method will be in a
-    //separate class. As this is a simple one class
-    //example it's all in the one class.
+    /**
+     * Main to start off the program.
+     * @param args
+     */
     public static void main(String[] args) {
         
         //new Main();
@@ -27,19 +35,17 @@ public class Main {
       
         //This will center the JFrame in the middle of the screen
         guiFrame.setLocationRelativeTo(null);
-
+        //create menu bar at the top
         JMenuBar menuBar = new JMenuBar();
         ImageIcon icon = new ImageIcon("basket.png");
         JMenuItem about = new JMenuItem("About...");
         about.setIcon(icon);
         menuBar.add(about);
-        
+        //adds menubar to the jframe.
         guiFrame.add(menuBar, BorderLayout.NORTH);
         
         //The ActionListener class is used to handle the
         //event that happens when the user clicks the button.
-        //As there is not a lot that needs to happen we can 
-        //define an anonymous inner class to make the code simpler.
         about.addActionListener(new ActionListener()
         {
             @Override
