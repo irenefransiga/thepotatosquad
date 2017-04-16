@@ -66,7 +66,7 @@ public class Main {
             		    "Members:"
             		    + "\nIrene Fransiga\nScott Hiraki"
             		    + "\nDavid Mkrtychyan\nMamadou Barry"
-            		    + "\nTanvir Singh(Beni)n\n"
+            		    + "\nTanvir Singh(Beni)\n"
             		    + "\nEmail:\nthepotatosquad05@gmail.com"
             		    + "\nURL:\nhttp://thepotatosquad.tk/",
             		    "We are 'The Potato Squad'",
