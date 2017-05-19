@@ -12,7 +12,7 @@ public class SignUp {
 	private JFrame frmThePotatoSquad;
 	private JPasswordField passwordField;
 	private JPasswordField passwordField_1;
-	private int TEST12; 
+	private int TEST12345; 
 
 	/**
 	 * Launch the application.
